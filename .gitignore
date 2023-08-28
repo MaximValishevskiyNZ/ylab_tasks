@@ -1,0 +1,7 @@
+/bitrix/*
+.idea/*
+/upload/
+/vendor/
+composer.phar
+.htaccess
+.htaccess.restore

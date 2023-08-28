@@ -17,8 +17,15 @@ $this->setFrameMode(true);
 		<? $res = CIBlockSection::GetByID($arItem['IBLOCK_SECTION_ID']);
 		$ar_res = $res->GetNext(); ?>
 		<div class="product-card">
-			<h3 class="product-title"><?= $arItem['NAME'] ?></h3>
-			<p class="product-category"><?= $ar_res['NAME'] ?></p>
+			<h3 class="product-title">
+				<?= $arItem['NAME'] ?>
+			</h3>
+			<p class="product-category">
+				<?= $ar_res['NAME'] ?>
+			</p>
+			<p class="product-category">
+				<?= "{$arItem['PROPERTIES']['WEIGHT']['VALUE']} {$arItem['PROPERTIES']['UNITS']['VALUE']}" ?>
+			</p>
 		</div>
 	<? endforeach; ?>
 </div>

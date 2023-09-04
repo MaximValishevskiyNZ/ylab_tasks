@@ -7,8 +7,8 @@ $arComponentParameters = [
             "NAME" => GetMessage('ACTIVE_STATUS'),
             "TYPE" => "LIST",
             "VALUES" => [
-                "N" => GetMessage('EXPIRED'),
-                "Y" => GetMessage('NOT_EXPIRED')
+                "<" => GetMessage('EXPIRED'),
+                ">" => GetMessage('NOT_EXPIRED')
             ]
         ]
     ]

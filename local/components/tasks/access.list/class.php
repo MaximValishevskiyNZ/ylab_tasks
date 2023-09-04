@@ -12,8 +12,12 @@ class AccessList extends \CBitrixComponent
     public function executeComponent()
     {
         CModule::IncludeModule("iblock");
-        $arSelect = ["ID", "NAME", "PROPERTY_NAME", "DATE_ACTIVE_TO"];
-        $arFilter = ["IBLOCK_CODE" => 'closed-section-access', "ACTIVE" => $this->arParams["ACTIVE"]];
+        $today_date = date('d.m.Y H:i:s');
+        $arSelect = ["ID", "NAME", "DATE_ACTIVE_TO"];
+        $arFilter = [
+            "IBLOCK_CODE" => 'closed-section-access',
+            $this->arParams['~ACTIVE'] . "DATE_ACTIVE_TO" => $today_date, "ACTIVE" => "Y"
+        ];
         $res = CIBlockElement::GetList([], $arFilter, false, [], $arSelect);
         $this->arResult = [];
         while ($resItem = $res->Fetch()) {

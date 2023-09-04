@@ -4,6 +4,6 @@ $APPLICATION->SetTitle("Главная");
 	"tasks:access.list",
 	"",
 	Array(
-		"ACTIVE" => "Y"
+		"ACTIVE" => ">"
 	)
 );?><? require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/footer.php'); ?>
